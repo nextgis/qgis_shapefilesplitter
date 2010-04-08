@@ -15,7 +15,7 @@ class shapefile_splitter:
   def initGui(self):
     self.action = QAction("Split shapefile", self.iface.mainWindow())
     self.action.setStatusTip("Splits shapefile into many using text field with unique values")
-    QObject.connect(self.action, SIGNAL("activated()"), self.run)
+    QObject.connect(self.action, SIGNAL("triggered()"), self.run)
     self.iface.addPluginToMenu("&Split shapefile", self.action)
   def unload(self):
     self.iface.removePluginMenu("&Split shapefile",self.action)
