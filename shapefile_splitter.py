@@ -50,6 +50,7 @@ class shapefile_splitter( object ):
 
     self.actionRun = QAction("Split shapefile", self.iface.mainWindow())
     self.actionRun.setStatusTip("Splits shapefile into many using text field with unique values")
+    self.actionRun.setWhatsThis( "Split shapefile into many" )
     self.actionAbout = QAction( "About", self.iface.mainWindow() )
 
     QObject.connect(self.actionRun, SIGNAL("triggered()"), self.run)
