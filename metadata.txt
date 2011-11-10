@@ -1,0 +1,6 @@
+[general]
+name=ShapefileSplitter
+description=Splits shapefile into many using text field as a source
+version=Version 0.1.0
+authorName=Maxim Dubinin (sim@gis-lab.info)
+qgisMinimumVersion=1.0.0
