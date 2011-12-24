@@ -56,12 +56,20 @@ class shapefile_splitter( object ):
     QObject.connect(self.actionRun, SIGNAL("triggered()"), self.run)
     QObject.connect( self.actionAbout, SIGNAL( "triggered()" ), self.about )
 
-    self.iface.addPluginToMenu("Split shapefile", self.actionRun)
-    self.iface.addPluginToMenu( "Split shapefile", self.actionAbout )
+    if hasattr( self.iface, "addPluginToVectorMenu" ):
+      self.iface.addPluginToVectorMenu("Split shapefile", self.actionRun)
+      self.iface.addPluginToVectorMenu( "Split shapefile", self.actionAbout )
+    else:
+      self.iface.addPluginToMenu("Split shapefile", self.actionRun)
+      self.iface.addPluginToMenu( "Split shapefile", self.actionAbout )
 
   def unload(self):
-    self.iface.removePluginMenu("Split shapefile",self.actionRun)
-    self.iface.removePluginMenu( "Split shapefile", self.actionAbout )
+    if hasattr( self.iface, "addPluginToVectorMenu" ):
+      self.iface.removePluginVectorMenu("Split shapefile",self.actionRun)
+      self.iface.removePluginVectorMenu( "Split shapefile", self.actionAbout )
+    else:
+      self.iface.removePluginMenu("Split shapefile",self.actionRun)
+      self.iface.removePluginMenu( "Split shapefile", self.actionAbout )
 
   def about( self ):
     dlgAbout = QDialog()

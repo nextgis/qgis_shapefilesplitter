@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
-mVersion = "0.1.0"
+mVersion = "0.1.1"
 def name():
   return "ShapefileSplitter"
 def description():
   return "Splits shapefile into many using text field as a source"
+def category():
+  return "Vector"
 def qgisMinimumVersion():
   return "1.0"
 def version():
