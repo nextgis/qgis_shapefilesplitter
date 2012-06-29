@@ -6,7 +6,7 @@ from PyQt4.QtGui import *
 from qgis.core import *
 from qgis.gui import *
 
-from shapefilesplitterdialogbase import Ui_ShapefileSplitterDialog
+from ui_shapefilesplitterdialogbase import Ui_ShapefileSplitterDialog
 
 class SplitterDialog( QDialog, Ui_ShapefileSplitterDialog ):
   def __init__( self ):

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-mVersion = "0.1.1"
+mVersion = "0.1.2"
 def name():
   return "ShapefileSplitter"
 def description():
@@ -7,11 +7,11 @@ def description():
 def category():
   return "Vector"
 def qgisMinimumVersion():
-  return "1.0"
+  return "1.0.0"
 def version():
-  return mVersion
+  return "0.1.2"
 def authorName():
-  return "Maxim Dubinin, sim@gis-lab.info"
+  return "Maxim Dubinin (NextGIS)"
 def classFactory(iface):
   from shapefile_splitter import shapefile_splitter
   return shapefile_splitter(iface)

@@ -1,7 +1,17 @@
 [general]
-name=ShapefileSplitter
-description=Splits shapefile into many using text field as a source
-category=Vector
-version=Version 0.1.1
-authorName=Maxim Dubinin (sim@gis-lab.info)
-qgisMinimumVersion=1.0.0
+name = ShapefileSplitter
+description = Splits shapefile into many using text field as a source
+category = Vector
+version = 0.1.2
+qgisMinimumVersion = 1.0.0
+
+authorName = Maxim Dubinin (NextGIS)
+
+tags = vector, split, field
+
+homepage =
+tracker = http://hub.qgis.org/projects/shapefilesplitter
+repository = http://svn.gis-lab.info/shapefile_splitter
+
+experimental = True
+deprecated = False

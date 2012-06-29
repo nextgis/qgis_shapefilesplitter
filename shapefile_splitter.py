@@ -84,7 +84,10 @@ class shapefile_splitter( object ):
     lines.addWidget( QLabel( QApplication.translate( "Shapefile splitter", "Splits shapefile into many using\ntext field with unique values" ) ) )
     lines.addWidget( QLabel( QApplication.translate( "Shapefile splitter", "<b>Developers:</b>" ) ) )
     lines.addWidget( QLabel( "  Maxim Dubinin" ) )
-    #lines.addWidget( QLabel( QApplication.translate( "Shapefile splitter", "<b>Homepage:</b>") ) )
+    lines.addWidget( QLabel( QApplication.translate( "Shapefile splitter", "<b>Bugtracker:</b>") ) )
+    linkBugs = QLabel( "<a href=\"http://hub.qgis.org/projects/shapefilesplitter\">http://hub.qgis.org/projects/shapefilesplitter</a>" )
+    linkBugs.setOpenExternalLinks( True )
+    lines.addWidget( linkBugs )
 
     #overrideLocale = QSettings().value( "locale/overrideFlag", QVariant( False ) ).toBool()
     #if not overrideLocale:
